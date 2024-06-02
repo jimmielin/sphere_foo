@@ -10,6 +10,34 @@ To build the standalone Foo et al. library with `gfortran` as an example:
 gfortran -c sphere_foo_common.F90 sphere_foo.F90
 ```
 
+### Interactive Example
+
+You can build this library and use it interactively (i.e., on a command line) using
+```bash
+# To build:
+gfortran -c sphere_foo_common.F90 sphere_foo.F90
+gfortran -c examples/interactive_sphere_foo.F90 -o examples/interactive_sphere_foo.o
+gfortran sphere_foo_common.o sphere_foo.o examples/interactive_sphere_foo.o -o examples/interactive_sphere_foo.exe
+
+# To run:
+./examples/interactive_sphere_foo.exe
+```
+
+Running the program looks like:
+```
+ Input radius for Foo et al. (Ctrl-C or input negative number to quit):
+1
+ Radius =    1.0000000000000000      , calculated volume =    4.1887901282943290
+ Input radius for Foo et al. (Ctrl-C or input negative number to quit):
+2
+ Radius =    2.0000000000000000      , calculated volume =    33.510321026354632
+ Input radius for Foo et al. (Ctrl-C or input negative number to quit):
+-1
+ Exiting.
+```
+
+### Implementation Example
+
 Example code for running the parameterization is available in the `examples/` folder. To build it and link to the library, use:
 
 ```bash
