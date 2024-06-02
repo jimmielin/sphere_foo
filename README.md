@@ -44,3 +44,5 @@ The real number precision is flexible and is a `fp` parameter defined in `sphere
 
 ## Code documentation
 Code is documented using ProTeX, a perl script to generate documentation from code headers and readable comments with LaTeX support. Refer to [Automatic Documentation using ProTeX](http://wiki.seas.harvard.edu/geos-chem/index.php/Automatic_documentation_with_protex) from the GEOS-Chem Wiki for more information about this feature.
+
+Changelogs are kept in `CHANGELOG.md` based on [Keep a changelog](https://keepachangelog.com/en/1.1.0/) convention.
